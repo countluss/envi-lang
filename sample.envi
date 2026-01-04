@@ -1,0 +1,37 @@
+
+@scene scene1 {
+    @bg bg1
+
+    @text "Frog" "Hello I'm a frog"
+    @text "Frog" "I'm green and poisonous"
+    @text "Frog" "and i can jump super high"
+
+    @bg bg2
+
+    @jump scene2
+}
+
+@scene scene2 {
+    @bg bg3
+
+    @text "Cat" "Hello I'm a cat"
+    @text "Cat" "I'm black and white"
+    @text "Cat" "and i can catch mice"
+
+    @stop
+}
+
+#project {
+    name: "Sample",
+    start: "scene1",
+}
+
+@scene scene2 {
+    @bg bg3
+
+    @text "Cat" "Hello I'm a cat"
+    @text "Cat" "I'm black and white"
+    @text "Cat" "and i can catch mice"
+
+    @stop
+}
