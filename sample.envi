@@ -17,13 +17,11 @@
     @text "Cat" "Hello I'm a cat"
     @text "Cat" "I'm black and white"
     @text "Cat" "and i can catch mice"
-
-    @stop
 }
 
 #project {
-    name: "Sample",
-    start: "scene1",
+    "name": "Sample",
+    "start": "scene1",
 }
 
 @scene scene2 {
@@ -33,5 +31,4 @@
     @text "Cat" "I'm black and white"
     @text "Cat" "and i can catch mice"
 
-    @stop
 }

@@ -1,4 +1,5 @@
 #include "headers/lexer.h"
+// #include "libraries/simdjson/simdjson.h"
 #include <cctype>
 #include <string>
 #include <vector>
@@ -75,6 +76,7 @@ Token Lexer::readIdentifier() {
   return Token(TokenType::Identifier, tokenText, line);
 }
 
+// Maybe i should convert to simdjson::padded_string here itself, somehow
 Token Lexer::readJsonBlock() {
   std::string tokenText = "";
 

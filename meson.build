@@ -6,8 +6,9 @@ project(
 )
 
 envi_src = [
-    'envi.cpp',
-    'lexer.cpp'
+    'lexer.cpp',
+    'parser.cpp',
+    'libraries/simdjson/simdjson.cpp'
 ]
 
 executable('envi', 'envi.cpp',

@@ -6,16 +6,16 @@
 #include <vector>
 
 enum class TokenType {
-  AtFunc,  // @Scene
-  HashVar, // #character
-  String,  // "Hello"
-  LBrace,  // {
-  RBrace,  // }
-  Newline, // \n
-  EndOfFile,
+  AtFunc,    // @Scene
+  HashVar,   // #character
+  String,    // "Hello"
+  LBrace,    // {
+  RBrace,    // }
+  Newline,   // \n
+  EndOfFile, // This Token is likely never created
   Unknown,
   Identifier,
-  JsonBlock,
+  JsonBlock
 };
 
 enum class LexerState {
@@ -35,7 +35,7 @@ typedef struct Token {
 class Lexer {
 
 private:
-  std::string &src;
+  const std::string &src;
   size_t pos;
   int line;
   LexerState state;
@@ -53,7 +53,7 @@ private:
   Token nextToken();
 
 public:
-  Lexer(std::string &src)
+  Lexer(const std::string &src)
       : src(src), pos(0), line(1), state(LexerState::Script) {}
 
   std::vector<Token> tokenize();
